@@ -1,6 +1,6 @@
-declare module 'altamoon-robust-websocket' {
+declare module 'typescript-robust-websocket' {
   class RobustWebSocket extends WebSocket {
-    constructor(streamUri: string | (() => string | Promise<string>), options?: {
+    constructor(streamUri: string | (() => string | Promise<string>), protocols: string[], options?: {
       timeout?: number;
       shouldReconnect?: (event: CloseEvent, ws: WebSocket) => any;
       automaticOpen?: boolean;
