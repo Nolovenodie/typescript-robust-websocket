@@ -1,4 +1,4 @@
-# robust-websocket
+# typescript-robust-websocket
 
 #### A robust, reconnecting WebSocket client for the browser
 
@@ -22,7 +22,7 @@ It is error-code aware and will not reconnect on 1008 (HTTP 400 equivalent) and 
 Use it as you would a normal websocket:
 
 ```javascript
-var ws = new RobustWebSocket('ws://echo.websocket.org/')
+var ws = new RobustWebSocket('ws://echo.websocket.org/', [], {})
 
 ws.addEventListener('open', function(event) {
   ws.send('Hello!')
@@ -36,7 +36,7 @@ ws.addEventListener('message', function(event) {
 But with an optional set of options you can specify as a 3rd parameter
 
 ```javascript
-var ws = new RobustWebSocket('ws://echo.websocket.org/', {
+var ws = new RobustWebSocket('ws://echo.websocket.org/', [], {
    // The number of milliseconds to wait before a connection is considered to have timed out. Defaults to 4 seconds.
    timeout: 4000,
   // A function that given a CloseEvent or an online event (https://developer.mozilla.org/en-US/docs/Online_and_offline_events) and the `RobustWebSocket`,
