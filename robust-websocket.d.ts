@@ -7,6 +7,5 @@ declare module 'typescript-robust-websocket' {
       ignoreConnectivityEvents?: boolean;
     });
   }
-
-  export = RobustWebSocket;
 }
+export = RobustWebSocket;
